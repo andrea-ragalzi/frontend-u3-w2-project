@@ -6,6 +6,7 @@ const Weather = () => {
     let cityToFind = useSelector(state => state.weather.city);
     const apy_key = process.env.REACT_APP_MY_KEY;
     const [cityCoordinates, setCityCoordinates] = useState({});
+    let found = false;
     const [cityWeather, setCityWeather] = useState({
         main: {
             feels_like: 0,
@@ -48,7 +49,13 @@ const Weather = () => {
             if (response.ok) {
                 let data = await response.json()
                 console.log(data[0]);
-                setCityCoordinates(data[0]);
+                if (data[0] === undefined) {
+                    found = false;
+                }
+                else {
+                    setCityCoordinates(data[0]);
+                    found = true;
+                }
             } else {
                 console.log('errore nella chiamata')
             }
@@ -58,13 +65,19 @@ const Weather = () => {
     }
 
     const fetchCityWeather = async () => {
+        if (!found) {
+            return;
+        }
         let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${cityCoordinates.lat}&lon=${cityCoordinates.lon}&appid=`;
         try {
             let response = await fetch(`${urlWeather}${apy_key}`)
             if (response.ok) {
                 let data = await response.json()
                 console.log(data);
-                setCityWeather(data);
+                if (data) {
+                    setCityWeather(data);
+                    found = true;
+                }
             } else {
                 console.log('errore nella chiamata')
             }
