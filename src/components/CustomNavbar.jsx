@@ -33,7 +33,7 @@ const CustomNavbar = () => {
                                         Home
                                     </NavLink>
                                     <NavLink
-                                        to="/"
+                                        to="/about"
                                         className={
                                             location.pathname === '/'
                                                 ? 'nav-link active'
@@ -43,7 +43,7 @@ const CustomNavbar = () => {
                                         About Us
                                     </NavLink>
                                     <NavLink
-                                        to="/contacs"
+                                        to="/contacts"
                                         className={
                                             location.pathname === '/'
                                                 ? 'nav-link active'
