@@ -5,7 +5,7 @@ import CustomNavbar from './CustomNavbar'
 import Footer from './Footer'
 import { Container } from 'react-bootstrap';
 
-const PageWeather = () => {
+const Contacts = () => {
     return (
         <Container fluid>
             <CustomNavbar />
@@ -35,4 +35,4 @@ const PageWeather = () => {
     )
 }
 
-export default PageWeather;
+export default Contacs;

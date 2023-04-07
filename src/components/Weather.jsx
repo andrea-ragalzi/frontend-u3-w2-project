@@ -18,7 +18,12 @@ const Weather = () => {
         },
         weather: [
             {
-                description: ''
+                description: '',
+                sys: {
+                    country: '',
+                    sunrise: 0,
+                    sunset: 0
+                }
             }
         ],
         wind: {
@@ -70,28 +75,14 @@ const Weather = () => {
     }
 
     return (
-        <Table striped bordered hover>
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Temp.</th>
-                    <th>Precip.</th>
-                    <th>Wind</th>
-                    <th>Humidity</th>
-                    <th>Perc.</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>{cityWeather.weather[0].description}</td>
-                    <td>{parseInt(cityWeather.main.temp - 273.15)}° C</td>
-                    <td>deg: {cityWeather.wind.deg} speed: {cityWeather.wind.speed}</td>
-                    <td>{cityWeather.main.humidity}</td>
-                    <td>{parseInt(cityWeather.main.feels_like - 273.15)}° C</td>
-                </tr>
-            </tbody>
-        </Table>
+        <div>
+            <h2>{`${cityCoordinates.name}, ${cityCoordinates.state}, ${cityCoordinates.country}`}</h2>
+            <img src={`http://openweathermap.org/img/w/${cityWeather.weather[0].icon}.png`} alt="Weather img" />
+            <p>Temperature: {parseInt(cityWeather.main.temp - 273.15)}° C</p>
+            <p>Wind deg: {cityWeather.wind.deg} Wind speed: {cityWeather.wind.speed}</p>
+            <p>Humidity: {cityWeather.main.humidity}</p>
+            <p>Feels Like: {parseInt(cityWeather.main.feels_like - 273.15)}° C</p>
+        </div>
     );
 }
 

@@ -26,15 +26,32 @@ const CustomNavbar = () => {
                                         to="/"
                                         className={
                                             location.pathname === '/'
-                                              ? 'nav-link active'
-                                              : 'nav-link'
-                                          }
+                                                ? 'nav-link active'
+                                                : 'nav-link'
+                                        }
                                     >
                                         Home
                                     </NavLink>
-
-                                    <Nav.Link href="#action2">About us</Nav.Link>
-                                    <Nav.Link href="#">Contacts</Nav.Link>
+                                    <NavLink
+                                        to="/"
+                                        className={
+                                            location.pathname === '/'
+                                                ? 'nav-link active'
+                                                : 'nav-link'
+                                        }
+                                    >
+                                        About Us
+                                    </NavLink>
+                                    <NavLink
+                                        to="/contacs"
+                                        className={
+                                            location.pathname === '/'
+                                                ? 'nav-link active'
+                                                : 'nav-link'
+                                        }
+                                    >
+                                        Contacs
+                                    </NavLink>
                                 </Nav>
                                 <SearchBar></SearchBar>
                             </Navbar.Collapse>

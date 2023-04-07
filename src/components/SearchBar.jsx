@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
@@ -19,7 +18,7 @@ const SearchBar = () => {
         console.log(cityToFind);
         dispatch({
             type: 'GET_WEATHER',
-            payload: cityToFind,
+            payload: cityToFind
         })
         navigate('/weather');
     }

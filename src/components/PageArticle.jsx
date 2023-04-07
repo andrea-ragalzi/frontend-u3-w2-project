@@ -11,13 +11,19 @@ const PageArticle = () => {
             <CustomNavbar />
             <main>
                 <Row>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={8}>
                         <ArticleBig></ArticleBig>
                     </Col>
-                    <Col xs={12} md={6}>
+                    <Col xs={12} md={4}>
                         <aside>
-                            <h1>Lorem</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta illo distinctio placeat alias harum odit magnam tenetur atque nemo eum autem natus eos praesentium commodi obcaecati neque, necessitatibus est doloremque!</p>
+                            <Row className='justify-content-center'>
+                                <Col xs={12}>
+                                    <img src="https://www.3bmeteo.com/images/promo/luce_meteo_2.jpg" alt="" />
+                                </Col>
+                                <Col xs={12}>
+                                    <img src="https://www.3bmeteo.com/images/promo/shop-3b.jpg" alt="" />
+                                </Col>
+                            </Row>
                         </aside>
                     </Col>
                 </Row>

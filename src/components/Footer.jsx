@@ -8,14 +8,14 @@ const Footer = () => {
         <footer>
             <Row>
                 <Col xs={12}>
-                    <div>
-                        <Envelope></Envelope>
-                        <Twitter></Twitter>
-                        <Linkedin></Linkedin>
-                        <Github></Github>
+                    <div className='mb-3'>
+                        <Envelope className='me-3'></Envelope>
+                        <Twitter className='me-3'></Twitter>
+                        <Linkedin className='me-3'></Linkedin>
+                        <Github className='me-3'></Github>
                     </div>
-                    <p>Made with ❤️ by Andrea Ragalzi</p>
-                    <p>Copyright © {year}</p>
+                    <p className='mb-3'>Made with ❤️ by Andrea Ragalzi</p>
+                    <p className='mb-3'>Copyright © {year}</p>
                 </Col>
             </Row>
         </footer>
