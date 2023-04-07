@@ -11,26 +11,19 @@ const deleteFavourite = (values, valueToDelete) => {
 
 
 const initialState = {
-    favourites: {
-        companies: []
+    weather: {
+        city: 'Rome'
     }
 };
 
 const mainReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_TO_FAVOURITES':
+        case 'GET_WEATHER':
             return {
-                ...state,
-                favourites: {
-                    companies: addFavourite(state.favourites.companies, action.payload)
-                },
-            }
-        case 'DELETE_FROM_FAVOURITES':
-            return {
-                ...state,
-                favourites: {
-                    companies: deleteFavourite(state.favourites.companies, action.payload)
-                },
+              ...state,
+                weather: {
+                    city: action.payload
+                }
             }
         default:
             return state;
