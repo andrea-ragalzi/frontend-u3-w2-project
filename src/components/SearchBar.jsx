@@ -30,7 +30,7 @@ const SearchBar = () => {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
-                onChange={(event) => { handleChange(event) }}
+                onChange={(event) => { setTimeout(handleChange(event), 2000) }}
             />
             <Button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</Button>
         </Form>

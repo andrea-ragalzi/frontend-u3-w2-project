@@ -1,7 +1,7 @@
 
 const initialState = {
     weather: {
-        city: ''
+        city: 'r'
     }
 };
 
