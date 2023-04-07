@@ -14,7 +14,7 @@ const CustomNavbar = () => {
                 <Col xs={12}>
                     <Navbar bg="light" expand="lg">
                         <Container fluid>
-                            <Navbar.Brand href="/">TheStorm</Navbar.Brand>
+                            <h2 className='text-primary'>TheStorm</h2>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav
