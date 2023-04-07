@@ -14,7 +14,7 @@ const PageArticle = () => {
                     <Col xs={12} md={8}>
                         <ArticleBig></ArticleBig>
                     </Col>
-                    <Col xs={12} md={4}>
+                    <Col className='mt-5' xs={12} md={4}>
                         <aside>
                             <Row className='justify-content-center'>
                                 <Col xs={12}>
